@@ -1,4 +1,4 @@
 # AI-HackerRank-Track-Solutions
-My solutions to Artificial Intelligence track problems in HackerRank Online Judge
-My HackerRank Profile : https://www.hackerrank.com/Youssef_Ali
-My LinkedIn Profile : https://www.linkedin.com/in/youssef-ali-343443134/
+My solutions to <b>Artificial Intelligence track</b> problems in <b>HackerRank</b> Online Judge
+<br>My <b>HackerRank</b> Profile : https://www.hackerrank.com/Youssef_Ali
+<br>My <b>LinkedIn</b> Profile : https://www.linkedin.com/in/youssef-ali-343443134/

@@ -55,34 +55,6 @@ public class BotClean {
         
         // search for the nearest dirty cell from every diection
         
-        /*// left
-        for(int i = posc-1; i >= 0; i--) if(board[posr].charAt(i) == 'd') {
-            min = Math.min(min, dist(posr, posc, posr, i));
-            index = 0;
-            break;
-        }
-                
-        // right
-        for(int i = posc+1; i < board[0].length(); i++) if(board[posr].charAt(i) == 'd') {
-            min = Math.min(min, dist(posr, posc, posr, i));
-            index = 1;
-            break;
-        }
-                
-        // up
-        for(int i = posr-1; i >= 0; i--) if(board[i].charAt(posc) == 'd') {
-            min = Math.min(min, dist(posr, posc, i, posc));
-            index = 2;
-            break;
-        }
-                
-        // down
-        for(int i = posr+1; i < board.length; i++) if(board[i].charAt(posc) == 'd') {
-            min = Math.min(min, dist(posr, posc, i, posc));
-            index = 3;
-            break;
-        }*/
-        
         for(int i=0; i<board.length; i++) for(int j=0; j<board[0].length(); j++)
             if(board[i].charAt(j) == 'd') {
                 if(dist(posr, posc, i, j) < min){
@@ -90,9 +62,10 @@ public class BotClean {
                     min = dist(posr, posc, i, j);
                 }
             }
-                
+        
         System.out.println(dir[index]);
     }
+    
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int [] pos = new int[2];

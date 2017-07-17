@@ -16,31 +16,15 @@ public class BotClean {
     
     static int whichDirection(int r, int c , int i, int j) {
         int DIST = dist(r, c, i, j);
-        int min = 12, index = -1;
-        
-        //try left
-        if(valid(r, c-1) && dist(r, c-1, i, j) < min){
-            min = dist(r, c-1, i, j);
-            index = 0;
-        }
-        
-        // try right
-        if(valid(r, c+1) && dist(r, c+1, i, j) < min){
-            min = dist(r, c+1, i, j);
-            index = 1;
-        }
-        
-        // try up
-        if(valid(r-1, c) && dist(r-1, c, i, j) < min){
-            min = dist(r-1, c, i, j);
-            index = 2;
-        }
-        
-        // try down
-        if(valid(r+1, c) && dist(r+1, c, i, j) < min){
-            min = dist(r+1, c, i, j);
-            index = 3;
-        }
+        int min = 12, index = -1;        
+        int dx[] = {0,0,-1,1};
+        int dy[] = {-1,1,0,0};
+        for(int k=0; k<4; k++){
+             if(valid(r + dx[k], c + dy[k]) && dist(r + dx[k], c + dy[k], i, j) < min){
+                min = dist(r + dx[k], c + dy[k], i, j);
+                index = k;
+            }
+        }  
         return index;
     }
     
@@ -53,8 +37,7 @@ public class BotClean {
         String[] dir = {"LEFT", "RIGHT", "UP", "DOWN"};
         int min = 12, index = -1;
         
-        // search for the nearest dirty cell from every diection
-        
+        // search for the nearest dirty cell from every diection 
         for(int i=0; i<board.length; i++) for(int j=0; j<board[0].length(); j++)
             if(board[i].charAt(j) == 'd') {
                 if(dist(posr, posc, i, j) < min){

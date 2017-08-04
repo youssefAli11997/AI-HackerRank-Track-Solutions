@@ -1,4 +1,4 @@
-// Same code as "BotClean problem". 
+// Same code as "BotClean" problem. 
 // The difference is the concept of the problem (Whether it's deterministic or stochastic environment).
 
 import java.io.*;
